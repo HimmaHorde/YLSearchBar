@@ -16,10 +16,45 @@
 		CC89D637205277F7001FAC2D /* MySearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC89D636205277F7001FAC2D /* MySearchBar.xib */; };
 		CC89D63A20527CC5001FAC2D /* aaa2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC89D63820527CC5001FAC2D /* aaa2.png */; };
 		CC89D63B20527CC5001FAC2D /* aaa1.png in Resources */ = {isa = PBXBuildFile; fileRef = CC89D63920527CC5001FAC2D /* aaa1.png */; };
+		CC92F022205CF7EC002DDA6B /* YLSearchResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CC92F01F205CF7C7002DDA6B /* YLSearchResource.bundle */; };
+		CC92F026205CFB3E002DDA6B /* you@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC92F023205CFB3D002DDA6B /* you@2x.png */; };
+		CC92F027205CFB3E002DDA6B /* you@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC92F024205CFB3D002DDA6B /* you@3x.png */; };
+		CC92F028205CFB3E002DDA6B /* you@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC92F025205CFB3E002DDA6B /* you@1x.png */; };
+		CC92F057205CFF95002DDA6B /* YLSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = CC92F055205CFF95002DDA6B /* YLSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC92F05A205CFF95002DDA6B /* YLSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC92F053205CFF95002DDA6B /* YLSearch.framework */; };
+		CC92F05B205CFF95002DDA6B /* YLSearch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC92F053205CFF95002DDA6B /* YLSearch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CC92F05F205CFFA1002DDA6B /* YLSearchResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CC92F01F205CF7C7002DDA6B /* YLSearchResource.bundle */; };
+		CC92F060205CFFA6002DDA6B /* YLSearchBar.h in Headers */ = {isa = PBXBuildFile; fileRef = CCBC941A20564A6F0033D126 /* YLSearchBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC92F061205CFFA6002DDA6B /* YLSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBC941B20564A6F0033D126 /* YLSearchBar.m */; };
+		CC92F062205CFFA6002DDA6B /* YLSearchTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = CCBC941F205669EA0033D126 /* YLSearchTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC92F063205CFFA6002DDA6B /* YLSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBC9420205669EA0033D126 /* YLSearchTextField.m */; };
 		CCBC941C20564A6F0033D126 /* YLSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBC941B20564A6F0033D126 /* YLSearchBar.m */; };
-		CCBC941E205664C30033D126 /* yl_search_iocn.png in Resources */ = {isa = PBXBuildFile; fileRef = CCBC941D205664C30033D126 /* yl_search_iocn.png */; };
 		CCBC9421205669EA0033D126 /* YLSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBC9420205669EA0033D126 /* YLSearchTextField.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC92F058205CFF95002DDA6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC89D6122052689C001FAC2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC92F052205CFF95002DDA6B;
+			remoteInfo = YLSearch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CC92F01A205CF763002DDA6B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CC92F05B205CFF95002DDA6B /* YLSearch.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CC89D61A2052689C001FAC2D /* UISearchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UISearchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,15 +70,31 @@
 		CC89D636205277F7001FAC2D /* MySearchBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySearchBar.xib; sourceTree = "<group>"; };
 		CC89D63820527CC5001FAC2D /* aaa2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aaa2.png; sourceTree = "<group>"; };
 		CC89D63920527CC5001FAC2D /* aaa1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aaa1.png; sourceTree = "<group>"; };
+		CC92F010205CF763002DDA6B /* YLSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLSearchBar.h; sourceTree = "<group>"; };
+		CC92F011205CF763002DDA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC92F01F205CF7C7002DDA6B /* YLSearchResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YLSearchResource.bundle; sourceTree = "<group>"; };
+		CC92F023205CFB3D002DDA6B /* you@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "you@2x.png"; sourceTree = "<group>"; };
+		CC92F024205CFB3D002DDA6B /* you@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "you@3x.png"; sourceTree = "<group>"; };
+		CC92F025205CFB3E002DDA6B /* you@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "you@1x.png"; sourceTree = "<group>"; };
+		CC92F053205CFF95002DDA6B /* YLSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YLSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC92F055205CFF95002DDA6B /* YLSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLSearch.h; sourceTree = "<group>"; };
+		CC92F056205CFF95002DDA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCBC941A20564A6F0033D126 /* YLSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLSearchBar.h; sourceTree = "<group>"; };
 		CCBC941B20564A6F0033D126 /* YLSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLSearchBar.m; sourceTree = "<group>"; };
-		CCBC941D205664C30033D126 /* yl_search_iocn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yl_search_iocn.png; sourceTree = "<group>"; };
 		CCBC941F205669EA0033D126 /* YLSearchTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLSearchTextField.h; sourceTree = "<group>"; };
 		CCBC9420205669EA0033D126 /* YLSearchTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLSearchTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CC89D6172052689C001FAC2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC92F05A205CFF95002DDA6B /* YLSearch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC92F04F205CFF95002DDA6B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -57,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				CC89D61C2052689C001FAC2D /* UISearchBar */,
+				CC92F00F205CF763002DDA6B /* YLSearchBar */,
+				CC92F054205CFF95002DDA6B /* YLSearch */,
 				CC89D61B2052689C001FAC2D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				CC89D61A2052689C001FAC2D /* UISearchBar.app */,
+				CC92F053205CFF95002DDA6B /* YLSearch.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +126,9 @@
 		CC89D61C2052689C001FAC2D /* UISearchBar */ = {
 			isa = PBXGroup;
 			children = (
+				CC92F025205CFB3E002DDA6B /* you@1x.png */,
+				CC92F023205CFB3D002DDA6B /* you@2x.png */,
+				CC92F024205CFB3D002DDA6B /* you@3x.png */,
 				CC89D63920527CC5001FAC2D /* aaa1.png */,
 				CC89D63820527CC5001FAC2D /* aaa2.png */,
 				CC89D61D2052689D001FAC2D /* AppDelegate.h */,
@@ -82,7 +139,7 @@
 				CCBC941B20564A6F0033D126 /* YLSearchBar.m */,
 				CCBC941F205669EA0033D126 /* YLSearchTextField.h */,
 				CCBC9420205669EA0033D126 /* YLSearchTextField.m */,
-				CCBC941D205664C30033D126 /* yl_search_iocn.png */,
+				CC92F01F205CF7C7002DDA6B /* YLSearchResource.bundle */,
 				CC89D636205277F7001FAC2D /* MySearchBar.xib */,
 				CC89D6232052689D001FAC2D /* Main.storyboard */,
 				CC89D6262052689D001FAC2D /* Assets.xcassets */,
@@ -93,7 +150,38 @@
 			path = UISearchBar;
 			sourceTree = "<group>";
 		};
+		CC92F00F205CF763002DDA6B /* YLSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				CC92F010205CF763002DDA6B /* YLSearchBar.h */,
+				CC92F011205CF763002DDA6B /* Info.plist */,
+			);
+			path = YLSearchBar;
+			sourceTree = "<group>";
+		};
+		CC92F054205CFF95002DDA6B /* YLSearch */ = {
+			isa = PBXGroup;
+			children = (
+				CC92F055205CFF95002DDA6B /* YLSearch.h */,
+				CC92F056205CFF95002DDA6B /* Info.plist */,
+			);
+			path = YLSearch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CC92F050205CFF95002DDA6B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC92F062205CFFA6002DDA6B /* YLSearchTextField.h in Headers */,
+				CC92F057205CFF95002DDA6B /* YLSearch.h in Headers */,
+				CC92F060205CFFA6002DDA6B /* YLSearchBar.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		CC89D6192052689C001FAC2D /* UISearchBar */ = {
@@ -103,15 +191,35 @@
 				CC89D6162052689C001FAC2D /* Sources */,
 				CC89D6172052689C001FAC2D /* Frameworks */,
 				CC89D6182052689C001FAC2D /* Resources */,
+				CC92F01A205CF763002DDA6B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CC92F059205CFF95002DDA6B /* PBXTargetDependency */,
 			);
 			name = UISearchBar;
 			productName = UISearchBar;
 			productReference = CC89D61A2052689C001FAC2D /* UISearchBar.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CC92F052205CFF95002DDA6B /* YLSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC92F05C205CFF96002DDA6B /* Build configuration list for PBXNativeTarget "YLSearch" */;
+			buildPhases = (
+				CC92F04E205CFF95002DDA6B /* Sources */,
+				CC92F04F205CFF95002DDA6B /* Frameworks */,
+				CC92F050205CFF95002DDA6B /* Headers */,
+				CC92F051205CFF95002DDA6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YLSearch;
+			productName = YLSearch;
+			productReference = CC92F053205CFF95002DDA6B /* YLSearch.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -125,6 +233,10 @@
 					CC89D6192052689C001FAC2D = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Manual;
+					};
+					CC92F052205CFF95002DDA6B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -142,6 +254,7 @@
 			projectRoot = "";
 			targets = (
 				CC89D6192052689C001FAC2D /* UISearchBar */,
+				CC92F052205CFF95002DDA6B /* YLSearch */,
 			);
 		};
 /* End PBXProject section */
@@ -151,13 +264,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCBC941E205664C30033D126 /* yl_search_iocn.png in Resources */,
 				CC89D62A2052689D001FAC2D /* LaunchScreen.storyboard in Resources */,
 				CC89D63A20527CC5001FAC2D /* aaa2.png in Resources */,
 				CC89D637205277F7001FAC2D /* MySearchBar.xib in Resources */,
+				CC92F028205CFB3E002DDA6B /* you@1x.png in Resources */,
+				CC92F022205CF7EC002DDA6B /* YLSearchResource.bundle in Resources */,
+				CC92F027205CFB3E002DDA6B /* you@3x.png in Resources */,
+				CC92F026205CFB3E002DDA6B /* you@2x.png in Resources */,
 				CC89D6272052689D001FAC2D /* Assets.xcassets in Resources */,
 				CC89D6252052689D001FAC2D /* Main.storyboard in Resources */,
 				CC89D63B20527CC5001FAC2D /* aaa1.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC92F051205CFF95002DDA6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC92F05F205CFFA1002DDA6B /* YLSearchResource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +300,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC92F04E205CFF95002DDA6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC92F063205CFFA6002DDA6B /* YLSearchTextField.m in Sources */,
+				CC92F061205CFFA6002DDA6B /* YLSearchBar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC92F059205CFF95002DDA6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC92F052205CFF95002DDA6B /* YLSearch */;
+			targetProxy = CC92F058205CFF95002DDA6B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CC89D6232052689D001FAC2D /* Main.storyboard */ = {
@@ -335,6 +476,54 @@
 			};
 			name = Release;
 		};
+		CC92F05D205CFF96002DDA6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YDDGQ3YALT;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YLSearch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanglin.YLSearch;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CC92F05E205CFF96002DDA6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YLSearch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanglin.YLSearch;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -352,6 +541,15 @@
 			buildConfigurations = (
 				CC89D6312052689D001FAC2D /* Debug */,
 				CC89D6322052689D001FAC2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC92F05C205CFF96002DDA6B /* Build configuration list for PBXNativeTarget "YLSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC92F05D205CFF96002DDA6B /* Debug */,
+				CC92F05E205CFF96002DDA6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

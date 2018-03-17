@@ -29,7 +29,7 @@
     
     _searchBar.frame = CGRectMake(0, 0, 414, 44);
     [self.containerView addSubview:_searchBar];
-    UIImageView * image  = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"yl_search_iocn"]];
+    UIImageView * image  = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"you@2x" ofType:@"png"]]];
     image.frame = CGRectMake(0, 0, 44, 40);
     _ttttt.leftView =  image;
     _ttttt.leftViewMode = UITextFieldViewModeAlways;

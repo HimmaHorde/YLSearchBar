@@ -14,6 +14,7 @@
 @implementation YLSearchBar{
     NSLayoutConstraint *_textToRight;
 }
+@synthesize searchImage = _searchImage;
 - (instancetype)init
 {
     self = [super init];
@@ -94,9 +95,10 @@
     
     self.clipsToBounds = YES;
     
-    UIImageView * image  = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"yl_search_iocn"]];
-    image.frame = CGRectMake(0, 0, 16, 16);
-    self.textField.leftView = image;
+    
+    UIImageView * imageView  = [[UIImageView alloc] initWithImage:self.searchImage];
+    imageView.frame = CGRectMake(0, 0,self.searchImage.size.width , self.searchImage.size.height);
+    self.textField.leftView = imageView;
     self.textField.leftViewMode = UITextFieldViewModeAlways;
     self.textField.clearButtonMode  = UITextFieldViewModeWhileEditing;
 }
@@ -192,6 +194,28 @@
         [_rightButton addTarget:self action:@selector(rightClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _rightButton;
+}
+- (UIImage *)searchImage
+{
+    if (!_searchImage) {
+        NSBundle * searchBundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[YLSearchBar class]] pathForResource:@"YLSearchResource" ofType:@"bundle"]];
+        return [UIImage imageWithContentsOfFile:[searchBundle pathForResource:@"yl_search_iocn@2x.png" ofType:nil]];
+//        return [UIImage imageNamed:@"yl_search_iocn"];
+    }
+    return _searchImage;
+}
+
+- (void)setSearchImage:(UIImage *)searchImage
+{
+    if (searchImage == nil) {
+        return ;
+    }
+    _searchImage = nil;
+    _searchImage = searchImage;
+    
+    UIImageView * imageView  = [[UIImageView alloc] initWithImage:searchImage];
+    imageView.frame = CGRectMake(0, 0,searchImage.size.width , searchImage.size.height);
+    self.textField.leftView = imageView;
 }
 
 @end
