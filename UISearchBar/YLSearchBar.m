@@ -20,6 +20,8 @@
     if (self) {
         [self initSubviews];
         self.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 44);
+        [self.textField addTarget:self action:@selector(textDidChage) forControlEvents:UIControlEventEditingChanged];
+        [self.textField addTarget:self action:@selector(textFieldDidEndEditing) forControlEvents:UIControlEventEditingDidEnd|UIControlEventEditingDidEndOnExit];
     }
     return self;
 }
@@ -29,47 +31,50 @@
     self = [super initWithCoder:coder];
     if (self) {
         [self initSubviews];
+        [self.textField addTarget:self action:@selector(textDidChage) forControlEvents:UIControlEventEditingChanged];
+        [self.textField addTarget:self action:@selector(textFieldDidEndEditing) forControlEvents:UIControlEventEditingDidEnd|UIControlEventEditingDidEndOnExit];
     }
     return self;
 }
-
+- (void)textFieldDidEndEditing
+{
+    NSLog(@"DidEndEditing %@",_textField.text);
+}
+- (void)textDidChage
+{
+    NSLog(@"text %@",_textField.text);
+}
 - (void)initSubviews
 {
-    [self addSubview:self.textfield];
+    [self addSubview:self.textField];
     [self addSubview:self.rightButton];
-    self.textfield.translatesAutoresizingMaskIntoConstraints = NO;
+    self.textField.translatesAutoresizingMaskIntoConstraints = NO;
     self.rightButton.translatesAutoresizingMaskIntoConstraints = NO;
     
-    NSArray *conts1 =  [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[T]-8-[B(53)]" options:0 metrics:nil views:@{@"T":_textfield,@"B":_rightButton}];
+    NSArray *conts1 =  [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[T]-8-[B(53)]" options:0 metrics:nil views:@{@"T":_textField,@"B":_rightButton}];
     [self addConstraints:conts1];
     
-    //textfield 高度
-    NSArray *conts2 =  [NSLayoutConstraint constraintsWithVisualFormat:@"V:[T(36)]" options:0 metrics:nil views:@{@"T":_textfield,}];
+    //textField 高度
+    NSArray *conts2 =  [NSLayoutConstraint constraintsWithVisualFormat:@"V:[T(36)]" options:0 metrics:nil views:@{@"T":_textField,}];
     //button 高度
     NSArray *conts3 =  [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[B]-0-|" options:0 metrics:nil views:@{@"B":_rightButton}];
     [self addConstraints:conts2];
     [self addConstraints:conts3];
     //居中显示
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:_textfield attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:_textField attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:_rightButton attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
     
-    //textfield 居右的距离
-    _textToRight = [NSLayoutConstraint constraintWithItem:_textfield attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
+    //textField 居右的距离
+    _textToRight = [NSLayoutConstraint constraintWithItem:_textField attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
     [self addConstraint:_textToRight];
     
     self.clipsToBounds = YES;
     
     UIImageView * image  = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"yl_search_iocn"]];
     image.frame = CGRectMake(0, 0, 16, 16);
-    self.textfield.leftView = image;
-    self.textfield.leftViewMode = UITextFieldViewModeAlways;
-    self.textfield.clearButtonMode  = UITextFieldViewModeWhileEditing;
-    self.textfield.delegate = self;
-}
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    self.textfield.subviews[1].clipsToBounds = YES;
+    self.textField.leftView = image;
+    self.textField.leftViewMode = UITextFieldViewModeAlways;
+    self.textField.clearButtonMode  = UITextFieldViewModeWhileEditing;
 }
 
 - (void)setShowsCancelButton:(BOOL)showsCancelButton
@@ -142,15 +147,15 @@
     }
 }
 #pragma mark - lazy
-- (UITextField *)textfield
+- (UITextField *)textField
 {
-    if (!_textfield) {
-        _textfield = [[YLSearchTextField alloc] init];
-        _textfield.textColor = [UIColor blackColor];
-        _textfield.borderStyle = UITextBorderStyleRoundedRect;
-        _textfield.font = [UIFont systemFontOfSize:15];
+    if (!_textField) {
+        _textField = [[YLSearchTextField alloc] init];
+        _textField.textColor = [UIColor blackColor];
+        _textField.borderStyle = UITextBorderStyleNone;
+        _textField.font = [UIFont systemFontOfSize:15];
     }
-    return _textfield;
+    return _textField;
 }
 
 - (UIButton *)rightButton{

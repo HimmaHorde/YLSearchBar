@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface YLSearchBar : UIView
-@property (nonatomic, strong) UITextField *textfield;
+@property (nonatomic, strong) UITextField *textField;
 @property (nonatomic, strong) UIButton *rightButton;
 @property (nonatomic, assign) BOOL showsCancelButton;
 
