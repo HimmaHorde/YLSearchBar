@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _searchBar = [[YLSearchBar alloc] init];
-    _searchBar.showsCancelButton = YES;
+    _searchBar.showsRightButton = YES;
     
     _bar = [[UISearchBar alloc] init];
     
@@ -42,7 +42,7 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [_searchBar setShowsCancelButton:!_searchBar.showsCancelButton animated:YES];
+    [_searchBar setShowsCancelButton:!_searchBar.showsRightButton animated:YES];
 }
 
 @end

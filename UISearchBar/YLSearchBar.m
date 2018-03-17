@@ -19,9 +19,7 @@
     self = [super init];
     if (self) {
         [self initSubviews];
-        self.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 44);
-        [self.textField addTarget:self action:@selector(textDidChage) forControlEvents:UIControlEventEditingChanged];
-        [self.textField addTarget:self action:@selector(textFieldDidEndEditing) forControlEvents:UIControlEventEditingDidEnd|UIControlEventEditingDidEndOnExit];
+        [self addActions];
     }
     return self;
 }
@@ -31,18 +29,44 @@
     self = [super initWithCoder:coder];
     if (self) {
         [self initSubviews];
-        [self.textField addTarget:self action:@selector(textDidChage) forControlEvents:UIControlEventEditingChanged];
-        [self.textField addTarget:self action:@selector(textFieldDidEndEditing) forControlEvents:UIControlEventEditingDidEnd|UIControlEventEditingDidEndOnExit];
+        [self addActions];
     }
     return self;
 }
+
+#pragma mark - 事件监听
+
+-(void)textFieldDidClickReturn{
+    if ([self.delegate respondsToSelector:@selector(ylSearchBarSearchButtonClicked:)]) {
+        [self.delegate ylSearchBarSearchButtonClicked:self];
+    }
+}
 - (void)textFieldDidEndEditing
 {
-    NSLog(@"DidEndEditing %@",_textField.text);
+    if ([self.delegate respondsToSelector:@selector(ylSearchBarTextDidEndEditing:)]) {
+        [self.delegate ylSearchBarTextDidEndEditing:self];
+    }
 }
 - (void)textDidChage
 {
-    NSLog(@"text %@",_textField.text);
+    if ([self.delegate respondsToSelector:@selector(ylSearchBar:textDidChange:)]) {
+        [self.delegate ylSearchBar:self textDidChange:_textField.text];
+    }
+}
+
+- (void)rightClick
+{
+    if ([self.delegate respondsToSelector:@selector(ylSearchBarRightButtonClicked:)]) {
+        [self.delegate ylSearchBarRightButtonClicked:self];
+    }
+}
+
+#pragma mark - 初始化
+- (void)addActions{
+    self.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 44);
+    [self.textField addTarget:self action:@selector(textDidChage) forControlEvents:UIControlEventEditingChanged];
+    [self.textField addTarget:self action:@selector(textFieldDidEndEditing) forControlEvents:UIControlEventEditingDidEnd];
+    [self.textField addTarget:self action:@selector(textFieldDidClickReturn) forControlEvents:UIControlEventEditingDidEnd];
 }
 - (void)initSubviews
 {
@@ -77,14 +101,14 @@
     self.textField.clearButtonMode  = UITextFieldViewModeWhileEditing;
 }
 
-- (void)setShowsCancelButton:(BOOL)showsCancelButton
+- (void)setShowsRightButton:(BOOL)showsRightButton
 {
-    if (_showsCancelButton == showsCancelButton) {
+    if (_showsRightButton == showsRightButton) {
         return;
     }
     [self endEditing:YES];
-    _showsCancelButton = showsCancelButton;
-    if (showsCancelButton) {
+    _showsRightButton = showsRightButton;
+    if (showsRightButton) {
         _textToRight.constant = -69;
         _rightButton.alpha = 1;
     } else {
@@ -94,13 +118,13 @@
     [self layoutSubviews];
 }
 
-- (void)setShowsCancelButton:(BOOL)showsCancelButton animated:(BOOL)animated{
-    if (_showsCancelButton == showsCancelButton) {
+- (void)setShowsCancelButton:(BOOL)showsRightButton animated:(BOOL)animated{
+    if (_showsRightButton == showsRightButton) {
         return;
     }
     [self endEditing:YES];
-    _showsCancelButton = showsCancelButton;
-    if (showsCancelButton) {
+    _showsRightButton = showsRightButton;
+    if (showsRightButton) {
         [UIView animateWithDuration:.3
                          animations:^{
                              _textToRight.constant = - 69;
@@ -152,8 +176,9 @@
     if (!_textField) {
         _textField = [[YLSearchTextField alloc] init];
         _textField.textColor = [UIColor blackColor];
-        _textField.borderStyle = UITextBorderStyleNone;
+        _textField.borderStyle = UITextBorderStyleRoundedRect;
         _textField.font = [UIFont systemFontOfSize:15];
+        _textField.returnKeyType = UIReturnKeySearch;
     }
     return _textField;
 }
@@ -164,6 +189,7 @@
         [_rightButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         [_rightButton setTitle:@"搜索" forState:UIControlStateNormal];
         _rightButton.titleLabel.font = [UIFont systemFontOfSize:15];
+        [_rightButton addTarget:self action:@selector(rightClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _rightButton;
 }

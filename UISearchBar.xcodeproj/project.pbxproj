@@ -13,7 +13,6 @@
 		CC89D6272052689D001FAC2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC89D6262052689D001FAC2D /* Assets.xcassets */; };
 		CC89D62A2052689D001FAC2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC89D6282052689D001FAC2D /* LaunchScreen.storyboard */; };
 		CC89D62D2052689D001FAC2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC89D62C2052689D001FAC2D /* main.m */; };
-		CC89D635205277E0001FAC2D /* MySearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CC89D634205277E0001FAC2D /* MySearchBar.m */; };
 		CC89D637205277F7001FAC2D /* MySearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC89D636205277F7001FAC2D /* MySearchBar.xib */; };
 		CC89D63A20527CC5001FAC2D /* aaa2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC89D63820527CC5001FAC2D /* aaa2.png */; };
 		CC89D63B20527CC5001FAC2D /* aaa1.png in Resources */ = {isa = PBXBuildFile; fileRef = CC89D63920527CC5001FAC2D /* aaa1.png */; };
@@ -33,8 +32,6 @@
 		CC89D6292052689D001FAC2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC89D62B2052689D001FAC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC89D62C2052689D001FAC2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CC89D633205277E0001FAC2D /* MySearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySearchBar.h; sourceTree = "<group>"; };
-		CC89D634205277E0001FAC2D /* MySearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySearchBar.m; sourceTree = "<group>"; };
 		CC89D636205277F7001FAC2D /* MySearchBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySearchBar.xib; sourceTree = "<group>"; };
 		CC89D63820527CC5001FAC2D /* aaa2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aaa2.png; sourceTree = "<group>"; };
 		CC89D63920527CC5001FAC2D /* aaa1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aaa1.png; sourceTree = "<group>"; };
@@ -81,8 +78,6 @@
 				CC89D61E2052689D001FAC2D /* AppDelegate.m */,
 				CC89D6202052689D001FAC2D /* ViewController.h */,
 				CC89D6212052689D001FAC2D /* ViewController.m */,
-				CC89D633205277E0001FAC2D /* MySearchBar.h */,
-				CC89D634205277E0001FAC2D /* MySearchBar.m */,
 				CCBC941A20564A6F0033D126 /* YLSearchBar.h */,
 				CCBC941B20564A6F0033D126 /* YLSearchBar.m */,
 				CCBC941F205669EA0033D126 /* YLSearchTextField.h */,
@@ -176,7 +171,6 @@
 				CCBC9421205669EA0033D126 /* YLSearchTextField.m in Sources */,
 				CCBC941C20564A6F0033D126 /* YLSearchBar.m in Sources */,
 				CC89D6222052689D001FAC2D /* ViewController.m in Sources */,
-				CC89D635205277E0001FAC2D /* MySearchBar.m in Sources */,
 				CC89D62D2052689D001FAC2D /* main.m in Sources */,
 				CC89D61F2052689D001FAC2D /* AppDelegate.m in Sources */,
 			);
